@@ -1,0 +1,5 @@
+@mixin fixed-to-top ($top: 0, $left: 0) {
+    position: fixed;
+    top: $top;
+    left: $left;
+}
