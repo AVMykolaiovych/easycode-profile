@@ -7,7 +7,7 @@
 	<title>Your profile</title>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <!-- Styles -->
+    <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -73,22 +73,20 @@
             </div>
             <!-- /.page-header-chart -->
         </div>
-		<!-- /.page-header -->
+		<!-- /.page-header --> 
 		<div class="profile-wrapper d-flex flex-wrap">
             <div class="profile-controls">
                 <div class="card">
-               
-                    <ul class="tab-controls d-flex">
-                        <li><a href="#" class="active">Activity</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Messages</a></li>
-                        <li><a href="#">Settings</a></li>
+                    <ul id="profileTab" class="nav tab-controls d-flex" role="tablist">
+                        <li class="nav-item"><a href="#activity" id="activity-tab" class="active" data-toggle="tab" role="tab" aria-controls="activity" aria-selected="true">Activity</a></li>
+                        <li class="nav-item"><a href="#profile" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">Profile</a></li>
+                        <li class="nav-item"><a href="#messages" id="messages-tab" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Messages</a></li>
+                        <li class="nav-item"><a href="#settings" id="settings-tab" data-toggle="tab" role="tab" aria-controls="settings" aria-selected="false">Settings</a></li>
                     </ul>
-           
                     <!-- /.tab-controls -->
 
-                    <div class="tab-content">
-                        <div class="tab-pane active">
+                    <div id="profileTabContent" class="tab-content">
+                        <div id="activity" class="tab-pane fade show active" role="tabpanel" aria-labelledby="activity-tab">
                             <div class="activity-wrapper">
                                 <div class="scrollbar-inner">
                                     <div class="activity-day">
@@ -193,12 +191,32 @@
                                         <!-- /.activity-item -->
                                     </div>
                                     <!-- /.activity-day -->
-                                </div>
+								</div>
+								<!-- /.scrollbar-inner -->
                             </div>
                             <!-- /.activity-wrapper -->
                         </div>
+                        <!-- /#activity .tab-pane .active-->
+                        <div id="profile" class="tab-pane fade" role="tabpanel" aria-labelledby="profile-tab">
+							<div class="profile-wrapper">
+								<h3 class="profile-title">Profile</h3>
+							</div>
+							<!-- /.profile-wrapper -->
+						</div>
                         <!-- /.tab-pane -->
-                        <div class="tab-pane"></div>
+                        <div id="messages" class="tab-pane fade" role="tabpanel" aria-labelledby="messages-tab">
+							<div class="messages-wrapper">
+								<h3 class="messages-title">Messages</h3>
+							</div>
+							<!-- /.messages-wrapper -->
+						</div>
+                        <!-- /.tab-pane -->
+                        <div id="settings" class="tab-pane fade" role="tabpanel" aria-labelledby="settings-tab">
+							<div class="settings-wrapper">
+								<h3 class="settings-title">Settings</h3>
+							</div>
+							<!-- /.settings-wrapper -->
+						</div>
                         <!-- /.tab-pane -->
                     </div>
                     <!-- /.tab-content -->
@@ -217,8 +235,20 @@
     </main>
 	<!-- /#main -->
 
+	<!-- Scripts -->
+
+	<!-- JQuery lib -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- JQuery scrollbar plugin -->
 	<script src="js/jquery.scrollbar.min.js"></script>
+
+	<!-- Init plugins -->
 	<script src="js/init.js"></script>
+	
 </body>
 </html>

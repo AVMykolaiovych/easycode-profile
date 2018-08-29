@@ -1,1 +1,3 @@
-$('.scrollbar-inner').scrollbar();
+$(function() {  
+	$('.scrollbar-inner').scrollbar();
+});
